@@ -1,0 +1,554 @@
+2023-04-24 12:43:04,791, INFO, Bot: Testbot [@sqwerty_py_bot], aiogram
+2023-04-24 12:43:05,080, WARNING, Updates were skipped successfully., aiogram
+2023-04-24 12:43:05,081, INFO, Start polling., aiogram.dispatcher.dispatcher
+2023-04-24 12:43:10,357, INFO, Получен ответ: [{'id': '86l', 'url': 'https://cdn2.thecatapi.com/images/86l.gif', 'width': 500, 'height': 278}], root
+2023-04-24 12:43:15,942, ERROR, Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=UnboundLocalError("local variable 'currency_from' referenced before assignment")>, asyncio
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 134, in convert_state
+    response = get_convert_api(currency_from, currency_to, amount)
+UnboundLocalError: local variable 'currency_from' referenced before assignment
+2023-04-24 12:44:00,521, INFO, Получен ответ: {'coord': {'lon': 80.2644, 'lat': 41.1231}, 'weather': [{'id': 800, 'main': 'Clear', 'description': 'ясно', 'icon': '01d'}], 'base': 'stations', 'main': {'temp': 21.06, 'feels_like': 19.53, 'temp_min': 21.06, 'temp_max': 21.06, 'pressure': 1018, 'humidity': 12, 'sea_level': 1018, 'grnd_level': 898}, 'visibility': 10000, 'wind': {'speed': 2.51, 'deg': 178, 'gust': 3.39}, 'clouds': {'all': 6}, 'dt': 1682318580, 'sys': {'country': 'CN', 'sunrise': 1682293623, 'sunset': 1682342819}, 'timezone': 28800, 'id': 1529660, 'name': 'Аксу', 'cod': 200}, root
+2023-04-24 12:45:30,315, ERROR, Сайт не доступен, код ответа 404, root
+2023-04-24 12:45:30,574, ERROR, Ошибка: 'NoneType' object is not subscriptable, root
+2023-04-24 12:45:30,574, ERROR, Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=Exception("Произошла ошибка: 'NoneType' object is not subscriptable")>, asyncio
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\convert.py", line 43, in get_convert_message
+    conversion_rate = data['conversion_rate']
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 141, in convert_state
+    conversion_message = get_convert_message(response, currency_to)
+  File "D:\Myprojects\python_bot\convert.py", line 47, in get_convert_message
+    raise Exception(f'Произошла ошибка: {error}')
+Exception: Произошла ошибка: 'NoneType' object is not subscriptable
+2023-04-24 12:45:46,271, ERROR, Сайт не доступен, код ответа 404, root
+2023-04-24 12:45:46,447, ERROR, Ошибка: 'NoneType' object is not subscriptable, root
+2023-04-24 12:45:46,447, ERROR, Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=Exception("Произошла ошибка: 'NoneType' object is not subscriptable")>, asyncio
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\convert.py", line 43, in get_convert_message
+    conversion_rate = data['conversion_rate']
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 141, in convert_state
+    conversion_message = get_convert_message(response, currency_to)
+  File "D:\Myprojects\python_bot\convert.py", line 47, in get_convert_message
+    raise Exception(f'Произошла ошибка: {error}')
+Exception: Произошла ошибка: 'NoneType' object is not subscriptable
+2023-04-24 12:48:35,809, INFO, Bot: Testbot [@sqwerty_py_bot], aiogram
+2023-04-24 12:48:36,110, WARNING, Updates were skipped successfully., aiogram
+2023-04-24 12:48:36,110, INFO, Start polling., aiogram.dispatcher.dispatcher
+2023-04-24 12:48:36,403, ERROR, Cause exception while getting updates., aiogram.dispatcher.dispatcher
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 385, in start_polling
+    allowed_updates=allowed_updates
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\bot.py", line 110, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\base.py", line 237, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\api.py", line 119, in check_result
+    exceptions.ConflictError.detect(description)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2023-04-24 12:48:41,569, ERROR, Cause exception while getting updates., aiogram.dispatcher.dispatcher
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 385, in start_polling
+    allowed_updates=allowed_updates
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\bot.py", line 110, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\base.py", line 237, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\api.py", line 119, in check_result
+    exceptions.ConflictError.detect(description)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2023-04-24 12:48:46,717, ERROR, Cause exception while getting updates., aiogram.dispatcher.dispatcher
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 385, in start_polling
+    allowed_updates=allowed_updates
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\bot.py", line 110, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\base.py", line 237, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\api.py", line 119, in check_result
+    exceptions.ConflictError.detect(description)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2023-04-24 12:48:51,876, ERROR, Cause exception while getting updates., aiogram.dispatcher.dispatcher
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 385, in start_polling
+    allowed_updates=allowed_updates
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\bot.py", line 110, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\base.py", line 237, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\api.py", line 119, in check_result
+    exceptions.ConflictError.detect(description)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2023-04-24 12:48:55,473, ERROR, Сайт не доступен, код ответа 404, root
+2023-04-24 12:48:55,703, ERROR, Ошибка: 'NoneType' object is not subscriptable, root
+2023-04-24 12:48:55,704, ERROR, Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=Exception("Произошла ошибка: 'NoneType' object is not subscriptable")>, asyncio
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\convert.py", line 43, in get_convert_message
+    conversion_rate = data['conversion_rate']
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 141, in convert_state
+    # Получаем данные о курсе
+  File "D:\Myprojects\python_bot\convert.py", line 47, in get_convert_message
+    raise Exception(f'Произошла ошибка: {error}')
+Exception: Произошла ошибка: 'NoneType' object is not subscriptable
+2023-04-24 12:48:57,037, ERROR, Cause exception while getting updates., aiogram.dispatcher.dispatcher
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 385, in start_polling
+    allowed_updates=allowed_updates
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\bot.py", line 110, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\base.py", line 237, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\api.py", line 119, in check_result
+    exceptions.ConflictError.detect(description)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2023-04-24 12:49:00,927, ERROR, Сайт не доступен, код ответа 404, root
+2023-04-24 12:49:01,133, ERROR, Ошибка: 'NoneType' object is not subscriptable, root
+2023-04-24 12:49:01,134, ERROR, Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=Exception("Произошла ошибка: 'NoneType' object is not subscriptable")>, asyncio
+Traceback (most recent call last):
+  File "d:\Myprojects\python_bot\convert.py", line 43, in get_convert_message
+    conversion_rate = data['conversion_rate']
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "d:/Myprojects/python_bot/main.py", line 142, in convert_state
+    conversion_message = get_convert_message(response, currency_to)
+  File "d:\Myprojects\python_bot\convert.py", line 47, in get_convert_message
+    raise Exception(f'Произошла ошибка: {error}')
+Exception: Произошла ошибка: 'NoneType' object is not subscriptable
+2023-04-24 12:49:02,175, ERROR, Cause exception while getting updates., aiogram.dispatcher.dispatcher
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 385, in start_polling
+    allowed_updates=allowed_updates
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\bot.py", line 110, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\base.py", line 237, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\api.py", line 119, in check_result
+    exceptions.ConflictError.detect(description)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2023-04-24 12:49:07,318, ERROR, Cause exception while getting updates., aiogram.dispatcher.dispatcher
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 385, in start_polling
+    allowed_updates=allowed_updates
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\bot.py", line 110, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\base.py", line 237, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\api.py", line 119, in check_result
+    exceptions.ConflictError.detect(description)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2023-04-24 12:49:12,463, ERROR, Cause exception while getting updates., aiogram.dispatcher.dispatcher
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 385, in start_polling
+    allowed_updates=allowed_updates
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\bot.py", line 110, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\base.py", line 237, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\api.py", line 119, in check_result
+    exceptions.ConflictError.detect(description)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2023-04-24 12:49:17,606, ERROR, Cause exception while getting updates., aiogram.dispatcher.dispatcher
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 385, in start_polling
+    allowed_updates=allowed_updates
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\bot.py", line 110, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\base.py", line 237, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\api.py", line 119, in check_result
+    exceptions.ConflictError.detect(description)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2023-04-24 12:49:22,746, ERROR, Cause exception while getting updates., aiogram.dispatcher.dispatcher
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 385, in start_polling
+    allowed_updates=allowed_updates
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\bot.py", line 110, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\base.py", line 237, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\api.py", line 119, in check_result
+    exceptions.ConflictError.detect(description)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2023-04-24 12:49:28,783, ERROR, Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=UnboundLocalError("local variable 'currency_from' referenced before assignment")>, asyncio
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 134, in convert_state
+    # Получаем ответ от API
+UnboundLocalError: local variable 'currency_from' referenced before assignment
+2023-04-24 12:49:40,268, ERROR, Сайт не доступен, код ответа 404, root
+2023-04-24 12:49:40,436, ERROR, Ошибка: 'NoneType' object is not subscriptable, root
+2023-04-24 12:49:40,437, ERROR, Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=Exception("Произошла ошибка: 'NoneType' object is not subscriptable")>, asyncio
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\convert.py", line 43, in get_convert_message
+    conversion_rate = data['conversion_rate']
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 141, in convert_state
+    # Получаем данные о курсе
+  File "D:\Myprojects\python_bot\convert.py", line 47, in get_convert_message
+    raise Exception(f'Произошла ошибка: {error}')
+Exception: Произошла ошибка: 'NoneType' object is not subscriptable
+2023-04-24 12:49:50,016, ERROR, Сайт не доступен, код ответа 404, root
+2023-04-24 12:49:50,210, ERROR, Ошибка: 'NoneType' object is not subscriptable, root
+2023-04-24 12:49:50,211, ERROR, Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=Exception("Произошла ошибка: 'NoneType' object is not subscriptable")>, asyncio
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\convert.py", line 43, in get_convert_message
+    conversion_rate = data['conversion_rate']
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 141, in convert_state
+    # Получаем данные о курсе
+  File "D:\Myprojects\python_bot\convert.py", line 47, in get_convert_message
+    raise Exception(f'Произошла ошибка: {error}')
+Exception: Произошла ошибка: 'NoneType' object is not subscriptable
+2023-04-24 12:50:45,538, INFO, Stop polling..., aiogram.dispatcher.dispatcher
+2023-04-24 12:50:45,538, WARNING, Goodbye!, aiogram
+2023-04-24 12:50:49,835, INFO, Bot: Testbot [@sqwerty_py_bot], aiogram
+2023-04-24 12:50:50,099, WARNING, Updates were skipped successfully., aiogram
+2023-04-24 12:50:50,100, INFO, Start polling., aiogram.dispatcher.dispatcher
+2023-04-24 12:50:56,752, ERROR, Сайт не доступен, код ответа 404, root
+2023-04-24 12:50:56,965, ERROR, Ошибка: 'NoneType' object is not subscriptable, root
+2023-04-24 12:50:56,966, ERROR, Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=Exception("Произошла ошибка: 'NoneType' object is not subscriptable")>, asyncio
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\convert.py", line 43, in get_convert_message
+    conversion_rate = data['conversion_rate']
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 142, in convert_state
+    conversion_message = get_convert_message(response, currency_to)
+  File "D:\Myprojects\python_bot\convert.py", line 47, in get_convert_message
+    raise Exception(f'Произошла ошибка: {error}')
+Exception: Произошла ошибка: 'NoneType' object is not subscriptable
+2023-04-24 12:51:59,850, ERROR, Сайт не доступен, код ответа 404, root
+2023-04-24 12:52:00,136, ERROR, Ошибка: 'NoneType' object is not subscriptable, root
+2023-04-24 12:52:00,137, ERROR, Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=Exception("Произошла ошибка: 'NoneType' object is not subscriptable")>, asyncio
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\convert.py", line 43, in get_convert_message
+    conversion_rate = data['conversion_rate']
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 142, in convert_state
+    conversion_message = get_convert_message(response, currency_to)
+  File "D:\Myprojects\python_bot\convert.py", line 47, in get_convert_message
+    raise Exception(f'Произошла ошибка: {error}')
+Exception: Произошла ошибка: 'NoneType' object is not subscriptable
+2023-04-24 12:52:12,601, ERROR, Сайт не доступен, код ответа 404, root
+2023-04-24 12:52:12,783, ERROR, Ошибка: 'NoneType' object is not subscriptable, root
+2023-04-24 12:52:12,784, ERROR, Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=Exception("Произошла ошибка: 'NoneType' object is not subscriptable")>, asyncio
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\convert.py", line 43, in get_convert_message
+    conversion_rate = data['conversion_rate']
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 142, in convert_state
+    conversion_message = get_convert_message(response, currency_to)
+  File "D:\Myprojects\python_bot\convert.py", line 47, in get_convert_message
+    raise Exception(f'Произошла ошибка: {error}')
+Exception: Произошла ошибка: 'NoneType' object is not subscriptable
+2023-04-24 12:54:55,182, INFO, Stop polling..., aiogram.dispatcher.dispatcher
+2023-04-24 12:54:55,182, WARNING, Goodbye!, aiogram
+2023-04-24 12:54:59,122, INFO, Bot: Testbot [@sqwerty_py_bot], aiogram
+2023-04-24 12:54:59,430, WARNING, Updates were skipped successfully., aiogram
+2023-04-24 12:54:59,431, INFO, Start polling., aiogram.dispatcher.dispatcher
+2023-04-24 12:55:14,534, INFO, Stop polling..., aiogram.dispatcher.dispatcher
+2023-04-24 12:55:14,534, WARNING, Goodbye!, aiogram
+2023-04-24 12:55:21,165, INFO, Bot: Testbot [@sqwerty_py_bot], aiogram
+2023-04-24 12:55:21,396, WARNING, Updates were skipped successfully., aiogram
+2023-04-24 12:55:21,397, INFO, Start polling., aiogram.dispatcher.dispatcher
+2023-04-24 12:55:29,719, ERROR, Сайт не доступен, код ответа 404, root
+2023-04-24 12:55:29,944, ERROR, Ошибка: 'NoneType' object is not subscriptable, root
+2023-04-24 12:55:30,102, ERROR, Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=MessageTextIsEmpty('Message text is empty')>, asyncio
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 144, in convert_state
+    await message.answer(conversion_message, reply_markup=keyboard)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\types\message.py", line 449, in answer
+    reply_markup=reply_markup,
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\bot.py", line 346, in send_message
+    result = await self.request(api.Methods.SEND_MESSAGE, payload)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\base.py", line 237, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.MessageTextIsEmpty: Message text is empty
+2023-04-24 12:56:29,166, INFO, Bot: Testbot [@sqwerty_py_bot], aiogram
+2023-04-24 12:56:29,441, WARNING, Updates were skipped successfully., aiogram
+2023-04-24 12:56:29,441, INFO, Start polling., aiogram.dispatcher.dispatcher
+2023-04-24 12:56:40,854, ERROR, Сайт не доступен, код ответа 404, root
+2023-04-24 12:57:29,588, ERROR, Сайт не доступен, код ответа 404, root
+2023-04-24 12:58:25,685, INFO, Bot: Testbot [@sqwerty_py_bot], aiogram
+2023-04-24 12:58:26,004, WARNING, Updates were skipped successfully., aiogram
+2023-04-24 12:58:26,005, INFO, Start polling., aiogram.dispatcher.dispatcher
+2023-04-24 12:58:33,626, ERROR, Сайт не доступен, код ответа 404, root
+2023-04-24 12:59:13,980, INFO, Stop polling..., aiogram.dispatcher.dispatcher
+2023-04-24 12:59:13,980, WARNING, Goodbye!, aiogram
+2023-04-24 12:59:18,107, INFO, Bot: Testbot [@sqwerty_py_bot], aiogram
+2023-04-24 12:59:18,482, WARNING, Updates were skipped successfully., aiogram
+2023-04-24 12:59:18,483, INFO, Start polling., aiogram.dispatcher.dispatcher
+2023-04-24 12:59:30,386, ERROR, Сайт не доступен, код ответа 404, root
+2023-04-24 13:00:01,201, INFO, Bot: Testbot [@sqwerty_py_bot], aiogram
+2023-04-24 13:00:01,505, WARNING, Updates were skipped successfully., aiogram
+2023-04-24 13:00:01,506, INFO, Start polling., aiogram.dispatcher.dispatcher
+2023-04-24 13:00:09,732, ERROR, Сайт не доступен, код ответа 404, root
+2023-04-24 13:01:05,520, INFO, Stop polling..., aiogram.dispatcher.dispatcher
+2023-04-24 13:01:05,521, WARNING, Goodbye!, aiogram
+2023-04-24 13:01:23,983, INFO, Bot: Testbot [@sqwerty_py_bot], aiogram
+2023-04-24 13:01:24,244, WARNING, Updates were skipped successfully., aiogram
+2023-04-24 13:01:24,245, INFO, Start polling., aiogram.dispatcher.dispatcher
+2023-04-24 13:01:32,266, ERROR, Сайт не доступен, код ответа 404, root
+2023-04-24 13:04:05,161, ERROR, Сайт не доступен, код ответа 404, root
+2023-04-24 13:06:05,624, INFO, Bot: Testbot [@sqwerty_py_bot], aiogram
+2023-04-24 13:06:05,866, WARNING, Updates were skipped successfully., aiogram
+2023-04-24 13:06:05,866, INFO, Start polling., aiogram.dispatcher.dispatcher
+2023-04-24 13:06:13,639, INFO, Получен ответ: {'result': 'success', 'documentation': 'https://www.exchangerate-api.com/docs', 'terms_of_use': 'https://www.exchangerate-api.com/terms', 'time_last_update_unix': 1682294402, 'time_last_update_utc': 'Mon, 24 Apr 2023 00:00:02 +0000', 'time_next_update_unix': 1682380802, 'time_next_update_utc': 'Tue, 25 Apr 2023 00:00:02 +0000', 'base_code': 'USD', 'target_code': 'RUB', 'conversion_rate': 81.3353, 'conversion_result': 8133.53}, root
+2023-04-24 13:07:03,337, INFO, Bot: Testbot [@sqwerty_py_bot], aiogram
+2023-04-24 13:07:03,579, WARNING, Updates were skipped successfully., aiogram
+2023-04-24 13:07:03,580, INFO, Start polling., aiogram.dispatcher.dispatcher
+2023-04-24 13:07:12,695, ERROR, Сайт не доступен, код ответа 404, root
+2023-04-24 13:08:46,286, INFO, Bot: Testbot [@sqwerty_py_bot], aiogram
+2023-04-24 13:08:46,529, WARNING, Updates were skipped successfully., aiogram
+2023-04-24 13:08:46,530, INFO, Start polling., aiogram.dispatcher.dispatcher
+2023-04-24 13:08:46,778, ERROR, Cause exception while getting updates., aiogram.dispatcher.dispatcher
+Traceback (most recent call last):
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 385, in start_polling
+    allowed_updates=allowed_updates
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\bot.py", line 110, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\base.py", line 237, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\bot\api.py", line 119, in check_result
+    exceptions.ConflictError.detect(description)
+  File "D:\Myprojects\python_bot\venv\lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2023-04-24 13:08:53,858, INFO, Получен ответ: {'result': 'success', 'documentation': 'https://www.exchangerate-api.com/docs', 'terms_of_use': 'https://www.exchangerate-api.com/terms', 'time_last_update_unix': 1682294402, 'time_last_update_utc': 'Mon, 24 Apr 2023 00:00:02 +0000', 'time_next_update_unix': 1682380802, 'time_next_update_utc': 'Tue, 25 Apr 2023 00:00:02 +0000', 'base_code': 'USD', 'target_code': 'RUB', 'conversion_rate': 81.3353, 'conversion_result': 8133.53}, root
+2023-04-24 13:18:26,004, INFO, Bot: Testbot [@sqwerty_py_bot], aiogram
+2023-04-24 13:18:26,244, WARNING, Updates were skipped successfully., aiogram
+2023-04-24 13:18:26,245, INFO, Start polling., aiogram.dispatcher.dispatcher
+2023-04-24 13:18:34,627, INFO, Получен ответ: {'result': 'success', 'documentation': 'https://www.exchangerate-api.com/docs', 'terms_of_use': 'https://www.exchangerate-api.com/terms', 'time_last_update_unix': 1682294402, 'time_last_update_utc': 'Mon, 24 Apr 2023 00:00:02 +0000', 'time_next_update_unix': 1682380802, 'time_next_update_utc': 'Tue, 25 Apr 2023 00:00:02 +0000', 'base_code': 'USD', 'target_code': 'RUB', 'conversion_rate': 81.3353, 'conversion_result': 8133.53}, root
+2023-04-24 13:18:46,704, INFO, Получен ответ: {'result': 'success', 'documentation': 'https://www.exchangerate-api.com/docs', 'terms_of_use': 'https://www.exchangerate-api.com/terms', 'time_last_update_unix': 1682294402, 'time_last_update_utc': 'Mon, 24 Apr 2023 00:00:02 +0000', 'time_next_update_unix': 1682380802, 'time_next_update_utc': 'Tue, 25 Apr 2023 00:00:02 +0000', 'base_code': 'RUB', 'target_code': 'KZT', 'conversion_rate': 5.5879, 'conversion_result': 558.79}, root
+2023-04-24 13:20:06,064, INFO, Bot: Testbot [@sqwerty_py_bot], aiogram
+2023-04-24 13:20:06,306, WARNING, Updates were skipped successfully., aiogram
+2023-04-24 13:20:06,306, INFO, Start polling., aiogram.dispatcher.dispatcher
+2023-04-24 13:20:14,370, INFO, Bot: Testbot [@sqwerty_py_bot], aiogram
+2023-04-24 13:20:14,654, WARNING, Updates were skipped successfully., aiogram
+2023-04-24 13:20:14,655, INFO, Start polling., aiogram.dispatcher.dispatcher
+2023-04-24 13:20:34,491, INFO, Bot: Testbot [@sqwerty_py_bot], aiogram
+2023-04-24 13:20:34,820, WARNING, Updates were skipped successfully., aiogram
+2023-04-24 13:20:34,820, INFO, Start polling., aiogram.dispatcher.dispatcher
+2023-04-24 13:20:56,677, INFO, Bot: Testbot [@sqwerty_py_bot], aiogram
+2023-04-24 13:20:56,958, WARNING, Updates were skipped successfully., aiogram
+2023-04-24 13:20:56,958, INFO, Start polling., aiogram.dispatcher.dispatcher
+2023-04-24 13:21:29,166, INFO, Bot: Testbot [@sqwerty_py_bot], aiogram
+2023-04-24 13:21:29,538, WARNING, Updates were skipped successfully., aiogram
+2023-04-24 13:21:29,539, INFO, Start polling., aiogram.dispatcher.dispatcher
+2023-04-24 13:21:38,994, ERROR, Сайт не доступен, код ответа 404, root
+2023-04-24 13:21:42,872, INFO, Получен ответ: {'result': 'success', 'documentation': 'https://www.exchangerate-api.com/docs', 'terms_of_use': 'https://www.exchangerate-api.com/terms', 'time_last_update_unix': 1682294402, 'time_last_update_utc': 'Mon, 24 Apr 2023 00:00:02 +0000', 'time_next_update_unix': 1682380802, 'time_next_update_utc': 'Tue, 25 Apr 2023 00:00:02 +0000', 'base_code': 'USD', 'target_code': 'RUB', 'conversion_rate': 81.3353, 'conversion_result': 8133.53}, root
+2023-04-24 13:21:51,861, ERROR, Сайт не доступен, код ответа 404, root

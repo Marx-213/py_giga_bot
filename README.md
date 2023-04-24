@@ -1,6 +1,6 @@
 # py_giga_bot
 
-![Python](https://img.shields.io/badge/Python_3.7-14354C?style=for-the-badge&logo=python&logoColor=white)![Python](https://img.shields.io/badge/pytelegrambotapi_4.6.1-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)
+![Python](https://img.shields.io/badge/Python_3.7-14354C?style=for-the-badge&logo=python&logoColor=white)![Python](https://img.shields.io/badge/aiogram_2.25.1-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)
 
 ### Описание
 Многофункциональный бот для социальной сети Telegram.

@@ -31,7 +31,7 @@ source env/bin/activate
 python3 -m pip install --upgrade pip
 pip install -r requirements.txt
 ``` 
-Создайте файл .env и заполните его данными:
+Создайть файл .env и заполните его данными:
 ```
 TOKEN= <Токен вашего бота в telegram>
 WEATHER_TOKEN= <Ваш токен на OpenWeatherApi>
